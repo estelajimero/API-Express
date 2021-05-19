@@ -1,0 +1,32 @@
+{
+  "name": "api-express",
+  "version": "1.0.0",
+  "description": "API con Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estelajimero/API-Express.git"
+  },
+  "keywords": [
+    "[Express",
+    "RestAPI",
+    "MongoDB",
+    "Mongoose",
+    "]"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estelajimero/API-Express/issues"
+  },
+  "homepage": "https://github.com/estelajimero/API-Express#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.10"
+  }
+}
