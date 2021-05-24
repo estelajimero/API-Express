@@ -5,14 +5,7 @@ En esta práctica se debe modificar el proyecto sobre un API CRUD elaborado en l
 nota técnica 7.10, para utilizar una agenda de datos personales más completa, incluyendo
 más datos sobre las personas y validándolos:
 
-Persona
-Nombre
-Apellidos
-Edad
-DNI
-Cumpleaños
-Color favorito
-Sexo
+Persona | Nombre | Apellidos | Edad | DNI | Cumpleaños | Color favorito | Sexo
 
 Siguiendo el patrón definido en la nota técnica, el API modificado será capaz de listar,
 crear, editar y borrar personas. Se utilizará la base de datos MongoDB utilizada
