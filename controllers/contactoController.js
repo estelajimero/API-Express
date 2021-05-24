@@ -109,18 +109,24 @@ exports.updateContacto = function(req, res) {
         modelo.findById(req.params.id, function(err, contacto) {
             if (err) return res.send(500, err.message);
 
-            contacto.nombre = req.body.nombre;
-            contacto.apellidos = req.body.apellidos;
-            contacto.edad = req.body.edad;
-            contacto.dni = req.body.dni;
-            contacto.cumpleanos = req.body.cumpleanos;
-            contacto.colorFavorito = req.body.colorFavorito;
-            contacto.sexo = req.body.sexo;
+            let testResult = Validation(req.body);
 
-        contacto.save(function(err) {
-            if (err) return res.status(500).send(err.message);
-            res.status(200).json(contacto);
-        });
+            if (testResult.length < 1) {
+                contacto.nombre = req.body.nombre;
+                contacto.apellidos = req.body.apellidos;
+                contacto.edad = req.body.edad;
+                contacto.dni = req.body.dni;
+                contacto.cumpleanos = req.body.cumpleanos;
+                contacto.colorFavorito = req.body.colorFavorito;
+                contacto.sexo = req.body.sexo;
+
+                contacto.save(function(err) {
+                    if (err) return res.status(500).send(err.message);
+                    res.status(200).json(contacto);
+                });
+            } else {
+                res.status(200).json(testResult);
+            }
     });
 };
 
